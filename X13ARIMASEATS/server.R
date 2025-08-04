@@ -164,7 +164,8 @@ function(input, output) {
         for (i in 1:length(SPC)) { if (sum(grep("file", SPC) == i) == 1) { break } }
         SPC[i] <- paste("file=", "'", getwd(), "/temp/DATA.dat", "'", sep = "")
         write.table(as.data.frame(trimws(SPC)), file = "temp/SPC_temp.spc", col.names = F, row.names = F, quote = F)
-        system(paste(paste(getwd(), "/WinX13/x13as/x13as.exe ", sep = ""), '"', paste(getwd(), "/temp/SPC_temp", sep = ""), '"', " -s", sep = ""))
+        # system(paste(paste(getwd(), "/WinX13/x13as/x13as.exe ", sep = ""), '"', paste(getwd(), "/temp/SPC_temp", sep = ""), '"', " -s", sep = ""))
+        system(paste("C:/winx13_V2.5/WinX13/x13as/x13as.exe ", '"', paste(getwd(), "/temp/SPC_temp", sep = ""), '"', " -s", sep = ""))
         
         # CONDICIONAL PARA ERRORES EN EL SPC
         condition <- readLines(paste(getwd(), "/temp/SPC_temp.out", sep = ""), warn = F)
@@ -219,7 +220,8 @@ function(input, output) {
             GRAF[i] <- paste(gsub("\\}", "",GRAF[i]), "save=(d8 d9 d10 d11 d12 d13 e1 e2 e3)}", sep = " ")
           }
           write.table(as.data.frame(trimws(GRAF)), file = "temp/SPC_graficas.spc", col.names = F, row.names = F, quote = F)
-          system(paste(paste(getwd(), "/WinX13/x13as/x13as.exe ", sep = ""), '"', paste(getwd(), "/temp/SPC_graficas", sep = ""), '"', " -s", sep = ""))
+          # system(paste(paste(getwd(), "/WinX13/x13as/x13as.exe ", sep = ""), '"', paste(getwd(), "/temp/SPC_graficas", sep = ""), '"', " -s", sep = ""))
+          system(paste("C:/winx13_V2.5/WinX13/x13as/x13as.exe ", '"', paste(getwd(), "/temp/SPC_graficas", sep = ""), '"', " -s", sep = ""))
           
           
           source("Diag_Report.R") # DIAGNOSTICO
