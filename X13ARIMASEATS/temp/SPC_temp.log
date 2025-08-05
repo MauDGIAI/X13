@@ -1,0 +1,21 @@
+1
+    Log for X-13ARIMA-SEATS program (Version 1.1 Build 39)  Aug  5, 2025  12.29.37 
+    *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
+
+ Type of  Series      Additional                   Series title
+ Adjust.  Ident.      Identifiers
+
+
+  M-MLT    /X13AR -------- -------- EMEC INGRESOS POR SUMINISTROS DE BIENES           
+                                    Y SERVICIOS AL POR MAYOR
+     Summary of Significant Ljung-Box Q:
+     Lag        Q         DF       P
+     ---     -------     ---     -----
+       5       5.130       1      0.024
+       6       7.737       2      0.021
+       7       9.835       3      0.020
+       8      11.170       4      0.025
+       9      11.351       5      0.045
+
