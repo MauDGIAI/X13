@@ -168,8 +168,7 @@ function(input, output) {
         # system(paste("C:/winx13_V2.5/WinX13/x13as/x13as.exe ", '"', paste(getwd(), "/temp/SPC_temp", sep = ""), '"', " -s", sep = ""))
         # system2(paste(getwd(), "/WinX13/x13as/x13as.exe ", sep = ""), args = paste(getwd(), "/temp/SPC_temp -s", sep = ""), stdout = TRUE, stderr = TRUE)
         # system2("x13as", args = "temp/SPC_temp -s", stdout = TRUE, stderr = TRUE)
-        # system("./x13as \"temp/SPC_temp\" -s")
-        system2("x13as", args = "temp/SPC_temp -s", stdout = TRUE, stderr = TRUE)
+        system("./x13as \"temp/SPC_temp\" -s")
         
         # CONDICIONAL PARA ERRORES EN EL SPC
         condition <- readLines(paste(getwd(), "/temp/SPC_temp.out", sep = ""), warn = F)
@@ -227,8 +226,7 @@ function(input, output) {
           # system(paste(paste(getwd(), "/WinX13/x13as/x13as_html ", sep = ""), '"', paste(getwd(), "/temp/SPC_graficas", sep = ""), '"', " -s", sep = ""))
           # system(paste("C:/winx13_V2.5/WinX13/x13as/x13as.exe ", '"', paste(getwd(), "/temp/SPC_graficas", sep = ""), '"', " -s", sep = ""))
           # system2("x13as", args = "temp/SPC_graficas -s", stdout = TRUE, stderr = TRUE)
-          # system("./x13as \"temp/SPC_graficas\" -s")
-          system2("x13as", args = "temp/SPC_graficas -s", stdout = TRUE, stderr = TRUE)
+          system("./x13as \"temp/SPC_graficas\" -s")
           
           source("Diag_Report.R") # DIAGNOSTICO
           SS <- f_diag(paste(getwd(), "/temp", sep = ""), as.character(input$SPC_file$name))
@@ -290,6 +288,7 @@ function(input, output) {
   })
   
 }
+
 
 
 
